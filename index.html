@@ -37,6 +37,9 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 </script>
 <script src="exp_common.js"></script>
 <script src="exp_jailbreak.js"></script>
+		<script src="webkit/utils.js"></script>
+		<script src="webkit/int64.js"></script>
+		<script src="webkit/ps4.js"></script>
 
 <button onclick="load_exploit_mira(); return false" style="margin:20px; background-color:transparent; border-color:transparent">
 <img src="./images/Mira.png" alt="text" style="height: 70px; width: 70px;" />
@@ -144,7 +147,7 @@ setTimeout(jailbreak,500);
 
 function load_exploit_HEN(){
 msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit + HEN ...</h1>";
-LoadedMSG="Exploit + HEN Loaded ✔";ExploitMira="HEN";MiraSRC="pl_HEN.js";
+LoadedMSG="Exploit + HEN Loaded ✔";ExploitMira="HEN";MiraSRC="payloads/preloader.js";"pl_HEN.js";
 setTimeout(jailbreak,500);
 }
 
@@ -163,6 +166,7 @@ setTimeout(jailbreak,500);
 function load_HEN(){
 msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading HEN ...</h1>";
 LoadedMSG="HEN Loaded ✔";
+var script = document.createElement('script');script.src = "payloads/preloader.js";document.getElementsByTagName('head')[0].appendChild(script);	
 var script = document.createElement('script');script.src = "pl_HEN.js";document.getElementsByTagName('head')[0].appendChild(script);
 var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
 }
